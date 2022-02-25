@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
+dunstctl set-paused true
+
 PICTURE=/tmp/i3lock.png
-SCREENSHOT="scrot $PICTURE"
+SCREENSHOT="maim $PICTURE"
 BLUR="5x5"
 
 $SCREENSHOT
 convert $PICTURE -blur $BLUR $PICTURE
 i3lock -i $PICTURE  --verif-text="Scanning..."
 rm $PICTURE
+
+dunstctl set-paused false
