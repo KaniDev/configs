@@ -4,7 +4,7 @@ dunstctl set-paused true
 
 PICTURE=/tmp/i3lock.png
 SCREENSHOT="maim $PICTURE"
-BLUR="2x10"
+BLUR="12x2"
 
 $SCREENSHOT
 convert $PICTURE -blur $BLUR $PICTURE
