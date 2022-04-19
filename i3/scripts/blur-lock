@@ -2,6 +2,6 @@
 
 dunstctl set-paused true
 
-i3lock-fancy-rapid 3 2 --verif-text=""
+i3lock-fancy-rapid 3 2
 
 dunstctl set-paused false
