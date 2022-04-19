@@ -4,10 +4,10 @@ dunstctl set-paused true
 
 PICTURE=/tmp/i3lock.png
 SCREENSHOT="maim $PICTURE"
-BLUR="1"
+BLUR="3x3"
 
 $SCREENSHOT
-convert $PICTURE -radial-blur $BLUR $PICTURE
+convert $PICTURE -gaussian-blur $BLUR $PICTURE
 i3lock -i $PICTURE  --verif-text=""
 rm $PICTURE
 
