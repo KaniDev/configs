@@ -2,13 +2,6 @@
 
 dunstctl set-paused true
 
-PICTURE=/tmp/i3lock.png
-SCREENSHOT="maim $PICTURE"
-BLUR="3x3"
-
-$SCREENSHOT
-convert $PICTURE -blur $BLUR $PICTURE
-i3lock -i $PICTURE  --verif-text=""
-rm $PICTURE
+i3lock-fancy-rapid 3 2 --verif-text=""
 
 dunstctl set-paused false
