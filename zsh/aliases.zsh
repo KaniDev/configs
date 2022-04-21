@@ -1,5 +1,4 @@
-alias vi="nvim"
-alias vim="nvim"
+alias vi="vim"
 alias sudo="sudo "
 alias gc="git commit"
 alias md="mkdir"
