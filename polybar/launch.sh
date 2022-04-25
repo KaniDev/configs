@@ -5,7 +5,9 @@ dir="$HOME/.config/polybar"
 launch_bar() {
   killall polybar
   while pgrep polybar; do killall polybar; done
-  polybar -q main -c "$dir/config.ini"
+for monitor in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR="$monitor" polybar -q main -c "$dir/config.ini" &
+done
 }
 
 launch_bar
