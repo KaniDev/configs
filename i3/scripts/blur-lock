@@ -3,5 +3,6 @@
 dunstctl set-paused true
 
 i3lock-fancy-rapid 3 2
+systemctl suspend-then-hibernate
 
 dunstctl set-paused false
