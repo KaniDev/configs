@@ -277,7 +277,7 @@ bindsym $mod+Tab exec --no-startup-id polybar-msg cmd toggle
 # screenshot
 bindsym Shift+$mod+s exec --no-startup-id maim --hidecursor --select | xclip -selection clipboard -t image/png
 # save screenshot to tmp
-bindsym Shift+$mod+b exec --no-startup-id xclip -selection clipboard -t image/png -o > /tmp/clipboard.png
+bindsym Ctrl+Shift+$mod+s exec --no-startup-id xclip -selection clipboard -t image/png -o > /tmp/clipboard.png
 
 # alternating layout for tiles
 exec_always --no-startup-id /usr/bin/alternating_layouts.py
