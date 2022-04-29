@@ -287,10 +287,10 @@ exec_always --no-startup-id /usr/bin/alternating_layouts.py
 exec --no-startup-id /usr/bin/discord --start-minimized
 
 #exec --no-startup-id polybar -r -q -c ~/.config/polybar/config bar
-exec_always --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
-exec_always --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
+exec --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
+exec --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
 exec_always --no-startup-id /home/kani/scripts/randomfeh ~/Pictures/wallpapers/current
-exec_always --no-startup-id picom --experimental-backends &
-exec_always --no-startup-id unclutter &
-exec_always --no-startup-id dunst &
+exec --no-startup-id picom --experimental-backends &
+exec -no-startup-id unclutter &
+exec --no-startup-id dunst &
 exec_always --no-startup-id /home/kani/.config/polybar/launch.sh &
