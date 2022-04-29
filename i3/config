@@ -287,7 +287,7 @@ exec --no-startup-id /usr/bin/discord --start-minimized
 
 #exec --no-startup-id polybar -r -q -c ~/.config/polybar/config bar
 exec_always --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
-exec_always --no-startup-id gitwatch -r git@github.com:KaniDev/configs /home/kani/dotfiles &
+exec_always --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
 exec_always --no-startup-id /home/kani/scripts/randomfeh ~/Pictures/wallpapers/current
 exec_always --no-startup-id picom --experimental-backends &
 exec_always --no-startup-id unclutter &
