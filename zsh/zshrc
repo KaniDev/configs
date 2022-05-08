@@ -123,4 +123,9 @@ export NVM_DIR="$HOME/.nvm"
 # yarn bin
 export PATH="$(yarn global bin):$PATH"
 
+# Android Studio env
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
 eval $(thefuck --alias)
