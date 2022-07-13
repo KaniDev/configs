@@ -126,5 +126,18 @@ export PATH="$(yarn global bin):$PATH"
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
-
+export REACT_EDITOR=code
 eval $(thefuck --alias)
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# bun completions
+[ -s "/home/kani/.bun/_bun" ] && source "/home/kani/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/home/kani/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh

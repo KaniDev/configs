@@ -291,6 +291,6 @@ exec --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/s
 exec --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
 exec_always --no-startup-id /home/kani/scripts/randomfeh ~/Pictures/wallpapers/current
 exec --no-startup-id picom --experimental-backends &
-exec -no-startup-id unclutter &
+#exec --no-startup-id unclutter &
 exec --no-startup-id dunst &
 exec_always --no-startup-id /home/kani/.config/polybar/launch.sh &
