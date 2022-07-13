@@ -104,7 +104,7 @@ bindsym $mod+a focus parent
 
 # define colors for windows:
 #class	            border bground text indicator child_border
-client.focused	    $darkpurple $darkpurple $blue $blue $blue
+client.focused	    $pink $pink $pink $pink $blue
 client.unfocused    $darkpurple $darkpurple $darkpurple $darkpurple
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -219,6 +219,8 @@ set $darkgrey		#383c4a
 set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $darkpurple         #211e29
+set $blue               #b7dfed
+set $pink               #f9c2ff
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps inverse_outer
