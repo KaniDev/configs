@@ -104,7 +104,7 @@ bindsym $mod+a focus parent
 
 # define colors for windows:
 #class	            border bground text indicator child_border
-client.focused	    $darkpurple $purple $darkblue $white $lightblue $mediumgrey
+client.focused	    $darkpurple $darkpurple $white $blue #CC0000
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
