@@ -103,8 +103,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # define colors for windows:
-#class		        border		bground		text		indicator	child_border
-client.focused	    $purple	$darkblue	$white		$lightblue	$mediumgrey
+#class	            border bground text indicator child_border
+client.focused	    $darkpurple $purple $darkblue $white $lightblue $mediumgrey
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -197,7 +197,7 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 
 # gaps
 # disable window titlebars
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 
 gaps inner 6
 gaps outer 0
