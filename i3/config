@@ -220,8 +220,7 @@ set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $darkpurple         #211e29
 set $blue               #b7dfed
-set $pink               #f9c2ff
-
+set $pink               #ad7db3
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps inverse_outer
 

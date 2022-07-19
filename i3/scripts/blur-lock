@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 dunstctl set-paused true
-i3lock-fancy-rapid 3 2
+i3lock-fancy-rapid 5 3
 dunstctl set-paused false
