@@ -287,7 +287,7 @@ bindsym Ctrl+Shift+$mod+s exec --no-startup-id xclip -selection clipboard -t ima
 exec_always --no-startup-id /usr/bin/alternating_layouts.py
 
 # discord autostart in background
-exec --no-startup-id /usr/bin/discord --start-minimized
+exec --no-startup-id /usr/bin/discord-ptb --start-minimized
 
 #exec --no-startup-id polybar -r -q -c ~/.config/polybar/config bar
 exec --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
