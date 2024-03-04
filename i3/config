@@ -62,13 +62,18 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start rofi:
-bindcode $mod+40 exec rofi -modi drun -show drun -drun-display-format {name} -window-match-fields name title
+bindsym $mod+e exec rofi -modi drun -show drun -drun-display-format {name} -window-match-fields name title
 
 # Change window focus:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+bindsym $mod+w focus up
+bindsym $mod+a focus left
+bindsym $mod+s focus down
+bindsym $mod+d focus right
 
 # Move focused window to workspace:
 bindsym $mod+Shift+Left move left
@@ -86,9 +91,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -96,15 +101,10 @@ bindsym $mod+Shift+space floating toggle
 # change keyboard layout (toggle between us and intl)
 bindsym $mod+space exec ~/scripts/xkbmap_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # define colors for windows:
 #class	            border bground text indicator child_border
-client.focused	    $pink $pink $pink $pink $pink
+client.focused	    $purple $purple $purple $purple $purple
 client.unfocused    $darkpurple $darkpurple $darkpurple $darkpurple
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -214,7 +214,7 @@ set $lightblue		#96cdfb
 set $urgentred		#e53935
 set $white		#ffffff
 set $black		#000000
-set $purple		#C9CBFF
+set $purple		#976ae6
 set $darkgrey		#383c4a
 set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
@@ -280,18 +280,24 @@ bindsym $mod+Tab exec --no-startup-id polybar-msg cmd toggle
 # screenshot
 bindsym Shift+$mod+s exec --no-startup-id maim --hidecursor --select | xclip -selection clipboard -t image/png
 
+# alternating layout
+exec_always --no-startup-id i3-autolayout autolayout &
+
 # save screenshot to tmp
 bindsym Ctrl+Shift+$mod+s exec --no-startup-id xclip -selection clipboard -t image/png -o > /tmp/clipboard.png
 
-# alternating layout for tiles
-exec_always --no-startup-id /usr/bin/alternating_layouts.py
-
 # discord autostart in background
-exec --no-startup-id /usr/bin/discord-ptb --start-minimized
+exec --no-startup-id /usr/bin/discord --start-minimized
 
-#exec --no-startup-id polybar -r -q -c ~/.config/polybar/config bar
-exec --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
-exec --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
+# clipboard manager
+exec_always --no-startup-id /usr/bin/copyq &
+bindsym $mod+p exec copyq toggle
+
+# syncthing for filesharing
+exec_always --no-startup-id /usr/bin/syncthing &
+
+#exec --no-startup-id gitwatch -r git@github.com:KaniDev/scripts.git /home/kani/scripts &
+#exec --no-startup-id gitwatch -r git@github.com:KaniDev/configs.git /home/kani/dotfiles &
 exec_always --no-startup-id /home/kani/scripts/randomfeh ~/Pictures/wallpapers/current
 exec --no-startup-id picom --experimental-backends &
 #exec --no-startup-id unclutter &

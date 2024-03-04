@@ -140,3 +140,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# editor thingy
+export EDITOR=vim
+export VISUAL="$EDITOR"
+
+# starship
+eval "$(starship init zsh)"
+# Atuin (shellsync history db)
+eval "$(atuin init zsh --disable-ctrl-r)"
